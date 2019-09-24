@@ -15,7 +15,8 @@ RUN apt-get install --yes \
   ca-certificates \
   curl \
   jq \
-  build-essential
+  build-essential \
+  file
 
 COPY build /usr/local/bin/build
 
