@@ -16,7 +16,14 @@ RUN apt-get install --yes \
   curl \
   jq \
   build-essential \
-  file
+  file \
+  wget \
+  cpio \
+  python \
+  unzip \
+  rsync \
+  bc \
+  git
 
 COPY build /usr/local/bin/build
 
