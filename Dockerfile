@@ -10,6 +10,13 @@ LABEL repository="https://github.com/RespawnDespair/github-action-build"
 LABEL homepage="https://github.com/RespawnDespair/github-action-build"
 LABEL maintainer="Jelle Tigchelaar <jtigchelaar@gmail.com>"
 
+RUN apt-get update
+RUN apt-get install --yes \
+  ca-certificates \
+  curl \
+  jq \
+  make
+
 COPY build /usr/local/bin/build
 
 ENTRYPOINT ["/usr/local/bin/build"]
